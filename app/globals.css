@@ -47,3 +47,18 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Animated theme toggler — suppress default browser view-transition so JS animation takes over */
+[data-magicui-theme-vt]::view-transition-old(root),
+[data-magicui-theme-vt]::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+[data-magicui-theme-vt]::view-transition-old(root) {
+  z-index: 1;
+}
+
+[data-magicui-theme-vt]::view-transition-new(root) {
+  z-index: 9999;
+}
