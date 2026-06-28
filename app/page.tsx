@@ -7,6 +7,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { QrCode, X, User, Bot, Code2, ArrowUpRight } from "lucide-react";
 
 import { ThemeToggle } from "./components/ThemeToggle";
+import { Reveal } from "./components/Reveal";
 import { Icon } from "./components/icons";
 import { SectionRenderer, type PortfolioData } from "./components/sections/registry";
 import { generateMarkdown } from "./data/generateMarkdown";
@@ -87,7 +88,13 @@ export default function Home() {
             className="flex w-full max-w-2xl flex-col items-center text-center"
           >
             {portfolio.sections.map((section, i) => (
-              <SectionRenderer key={i} section={section} ctx={{ time, socials: portfolio.socials }} />
+              <Reveal
+                key={i}
+                delay={section.type === "hero" ? 0 : 0.05}
+                className={section.type === "hero" ? "flex flex-col items-center" : ""}
+              >
+                <SectionRenderer section={section} ctx={{ time, socials: portfolio.socials }} />
+              </Reveal>
             ))}
           </motion.main>
         )}
