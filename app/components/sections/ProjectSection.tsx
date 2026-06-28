@@ -12,6 +12,7 @@ export interface ProjectData {
   name: string;
   link?: string;
   subtitle?: string;
+  image?: string;
   body: Block[];
   stats?: ProjectStat[];
   footerLink?: LinkRef;
@@ -21,21 +22,32 @@ export function ProjectSection({ title, data }: { title: string; data: ProjectDa
   return (
     <SectionShell title={title}>
       <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
-        <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">
-          {data.link ? (
-            <a
-              href={data.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg font-semibold text-black dark:text-white underline underline-offset-4 decoration-gray-300 dark:decoration-gray-700 hover:decoration-black dark:hover:decoration-white transition-colors"
-            >
-              {data.name}
-            </a>
-          ) : (
-            <span className="text-lg font-semibold text-black dark:text-white">{data.name}</span>
-          )}
-          {data.subtitle && (
-            <span className="text-xs font-medium text-gray-500 dark:text-gray-500">{data.subtitle}</span>
+        <div className="mb-6 flex items-start justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            {data.link ? (
+              <a
+                href={data.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg font-semibold text-black dark:text-white underline underline-offset-4 decoration-gray-300 dark:decoration-gray-700 hover:decoration-black dark:hover:decoration-white transition-colors"
+              >
+                {data.name}
+              </a>
+            ) : (
+              <span className="text-lg font-semibold text-black dark:text-white">{data.name}</span>
+            )}
+            {data.subtitle && (
+              <span className="text-xs font-medium text-gray-500 dark:text-gray-500">{data.subtitle}</span>
+            )}
+          </div>
+          {data.image && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={data.image}
+              alt={data.name}
+              className="h-12 w-auto shrink-0 rounded-lg object-contain"
+              loading="lazy"
+            />
           )}
         </div>
 

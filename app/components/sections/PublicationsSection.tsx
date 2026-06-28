@@ -10,6 +10,7 @@ export interface PublicationItem {
   abstract: string;
   collapsedHeight?: string;
   linkLabel?: string;
+  logo?: string;
 }
 
 export interface PublicationsData {
@@ -22,7 +23,7 @@ export function PublicationsSection({ title, data }: { title: string; data: Publ
       <div className="space-y-6">
         {data.items.map((pub) => (
           <div key={pub.title} className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
-            <div className="mb-1">
+            <div className="mb-1 flex items-start justify-between gap-4">
               <a
                 href={pub.link}
                 target="_blank"
@@ -31,6 +32,15 @@ export function PublicationsSection({ title, data }: { title: string; data: Publ
               >
                 {pub.title}
               </a>
+              {pub.logo && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={pub.logo}
+                  alt="publication venue logo"
+                  className="h-8 w-auto shrink-0 rounded-md object-contain"
+                  loading="lazy"
+                />
+              )}
             </div>
             <p className="text-xs font-medium text-gray-500 dark:text-gray-500">{pub.venue}</p>
             <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Authors: {pub.authors}</p>

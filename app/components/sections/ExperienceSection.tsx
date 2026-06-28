@@ -8,6 +8,8 @@ export interface ExperienceEntry {
   name: string;
   role: string;
   link?: string;
+  /** Optional logo image URL — rendered as a circular icon before the name. */
+  logo?: string;
   /** Optional date range — surfaced in the generated agent-mode markdown. */
   dateRange?: string;
   collapsedHeight?: string;
@@ -28,12 +30,23 @@ export function ExperienceSection({ title, data }: { title: string; data: Experi
       {/* Featured / Current role */}
       <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
         <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">
+          {featured.logo && (
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={featured.logo}
+                alt={`${featured.name} logo`}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </span>
+          )}
           {featured.link ? (
             <a
               href={featured.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg font-semibold text-black dark:text-white underline underline-offset-4 decoration-gray-300 dark:decoration-gray-700 hover:decoration-black dark:hover:decoration-white transition-colors"
+              className="text-lg font-semibold text-black dark:text-white no-underline hover:underline hover:underline-offset-4 hover:decoration-black dark:hover:decoration-white transition-colors"
             >
               {featured.name}
             </a>
@@ -58,7 +71,7 @@ export function ExperienceSection({ title, data }: { title: string; data: Experi
         </h3>
         <div className="flex flex-col gap-1 rounded-xl border border-gray-200 dark:border-gray-800 px-6 py-2 sm:px-8 sm:py-3">
           {previous.map((item) => (
-            <ExpandableExperienceItem key={item.name} title={item.name} role={item.role} link={item.link}>
+            <ExpandableExperienceItem key={item.name} title={item.name} role={item.role} link={item.link} logo={item.logo}>
               <div className="space-y-2">
                 <RichText blocks={item.body} />
               </div>

@@ -56,7 +56,7 @@ export function TechStackSection({ title, data }: { title: string; data: TechSta
                           <img
                             src={`https://cdn.simpleicons.org/${tech.slug}`}
                             alt={tech.name}
-                            className="h-full w-full object-contain opacity-80 hover:opacity-100 transition-all duration-300 brightness-0 hover:brightness-100 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100"
+                            className="h-full w-full object-contain opacity-80 hover:opacity-100 transition-all duration-300"
                             loading="lazy"
                           />
                         </div>
@@ -92,7 +92,7 @@ export function TechStackSection({ title, data }: { title: string; data: TechSta
                             <img
                               src={`https://cdn.simpleicons.org/${skill.slug}`}
                               alt={skill.name}
-                              className="h-full w-full object-contain opacity-50 group-hover:opacity-100 transition-all duration-300 brightness-0 group-hover:brightness-100 dark:brightness-0 dark:invert dark:group-hover:invert-0 dark:group-hover:brightness-100"
+                              className="h-full w-full object-contain opacity-70 group-hover:opacity-100 transition-all duration-300"
                               loading="lazy"
                             />
                           </div>

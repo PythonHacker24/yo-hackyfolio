@@ -7,6 +7,7 @@ export interface EducationItem {
   title: string;
   role: string;
   link?: string;
+  logo?: string;
   body: Block[];
 }
 
@@ -19,7 +20,7 @@ export function EducationSection({ title, data }: { title: string; data: Educati
     <SectionShell title={title}>
       <div className="space-y-12">
         {data.items.map((item) => (
-          <ExperienceItem key={item.title} title={item.title} role={item.role} link={item.link}>
+          <ExperienceItem key={item.title} title={item.title} role={item.role} link={item.link} logo={item.logo}>
             <RichText blocks={item.body} />
           </ExperienceItem>
         ))}

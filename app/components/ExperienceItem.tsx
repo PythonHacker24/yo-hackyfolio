@@ -10,15 +10,22 @@ interface ExperienceItemProps {
     collapsible?: boolean;
     link?: string;
     collapsedHeight?: string;
+    logo?: string;
 }
 
-export function ExperienceItem({ title, role, children, collapsible = false, link, collapsedHeight = "max-h-20" }: ExperienceItemProps) {
+export function ExperienceItem({ title, role, children, collapsible = false, link, collapsedHeight = "max-h-20", logo }: ExperienceItemProps) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
         <div className="group">
             <div className="mb-2 flex flex-col justify-between sm:flex-row sm:items-baseline">
                 <div className="flex items-center gap-2">
+                    {logo && (
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-md">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={logo} alt={`${title} logo`} className="h-full w-full object-cover" loading="lazy" />
+                        </span>
+                    )}
                     <span className="font-medium text-black dark:text-white">{title}</span>
                     {link && (
                         <a

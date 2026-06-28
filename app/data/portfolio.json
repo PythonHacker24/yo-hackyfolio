@@ -34,6 +34,7 @@
         "featured": {
           "name": "Remix (YC W26)",
           "link": "https://www.ycombinator.com/companies/resonate",
+          "logo": "https://remix.re/app-icon.png",
           "role": "Software Engineer, San Francisco, CA",
           "dateRange": "February 2026 - Present",
           "collapsedHeight": "max-h-48",
@@ -57,6 +58,7 @@
             "name": "Entrepreneur First",
             "role": "Founder in Residence, Bengaluru",
             "link": "https://www.joinef.com/",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/9/95/Entrepreneurs_First_Logo.png",
             "body": [
               "As a Founder in Residence at Entrepreneurs First (EF), a premier global talent investor and startup accelerator, I was immersed in designing and developing cutting-edge Agentic AI systems.",
               "Built autonomous, goal-driven AI agents that shifted from suggestion-based tools to proactive execution, enabling seamless human-AI collaboration and redefining task automation and decision-making.",
@@ -67,8 +69,9 @@
           },
           {
             "name": "Google Summer of Code 2025",
-            "role": "Emory University School of Medicine, Atlanta, USA",
+            "role": "Emory University, Atlanta, USA",
             "link": "https://minimalistbook.com/gsoc-final-report-2025/",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xHRLRVUxrSQ9cZ0T4CLQ6aI4NI62iCHO4An0lLXgUw&s=10",
             "body": [
               "Designed and developed a comprehensive system for managing Access Control List (ACL) permissions across multiple Linux file system servers, including NFS and BeeGFS, demonstrating expertise in large-scale distributed systems and secure file management.",
               "Built a robust backend capable of processing millions of permission change requests, showcasing proficiency in high-performance computing and scalability.",
@@ -80,6 +83,7 @@
             "name": "Professional Freelancer (Technical GTM)",
             "role": "Technical Writer, Tel Aviv, Israel",
             "link": "https://www.upwork.com/freelancers/~0172a072394ece49bb?viewMode=1",
+            "logo": "https://play-lh.googleusercontent.com/OtMKLcIcl_wNIhmuXUZT0L72ysVsdekDomOnhIjqAppwqix3wl3iniGGE9xY8AKEqhN9",
             "body": [
               "Authored comprehensive, highly technical documentation (50+ pages) for a Software Composition Analysis (SCA) tool, including detailed guides on advanced features such as reachability analysis - focusing on identifying truly exploitable vulnerabilities in open-source dependencies to reduce noise and prioritize remediation in secure software development lifecycles.",
               "Ghostwrote in-depth content on Reachability Analysis for the CTO of a security company, explaining how it enhances SCA by determining whether detected vulnerabilities are actually reachable and exploitable in the application's codebase - delivering clear, authoritative thought leadership material suitable for blogs, whitepapers, or technical marketing.",
@@ -90,6 +94,7 @@
           {
             "name": "Engineering Intern",
             "role": "Athena Consulting Ltd. Dubai",
+            "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQF9MMIpP3ksYQ/company-logo_200_200/company-logo_200_200/0/1672242362219/athenaconsulting1_logo?e=1784160000&v=beta&t=_HTwTwnR9MGd3H2HltAtz_z2BwLEzQsO8WhysZ45Cqo",
             "body": [
               "Led the complete system design and deployment architecture for Eumlet, a UAE-based B2B Web3 payments and financial platform (built on Next.js), on AWS infrastructure. Configured Debian EC2 instances, Application Load Balancer (ALB), and NGINX reverse proxy under senior guidance - ensuring high availability, scalability, and secure handling of financial transactions in a regulated environment.",
               "Engineered automated CI/CD pipelines using GitHub Actions for seamless build, test, and deployment workflows, with direct integration and manual orchestration to EC2 targets - demonstrating strong expertise in modern DevOps practices, infrastructure as code principles, and zero-downtime deployments for production fintech applications.",
@@ -183,6 +188,7 @@
         "name": "Double Dart",
         "link": "https://www.doubledart.fun/",
         "subtitle": "Anonymous crush matching for NIT Hamirpur, Class of 2026",
+        "image": "/doubledart-logo.svg",
         "body": [
           "a 3-day social experiment i shipped with a batchmate: graduating students anonymously dart the people they noticed over four years. a crush stays sealed forever unless it is mutual, and only then are both names revealed.",
           "built lean on Supabase and Vercel with college-email Google sign-in. no ops team, no data hoarding, the database was destroyed after the event and only anonymized stats remain."
@@ -231,6 +237,7 @@
           {
             "title": "National Institute of Technology Hamirpur",
             "role": "Electrical Engineering",
+            "logo": "https://nith.ac.in/uploads/topics/nit-logo15954991401255.jpg",
             "body": ["2022 - Surviving"]
           }
         ]
@@ -249,6 +256,7 @@
           {
             "title": "Cross-Compatible Encryption Adapter for Securing Legacy Modbus Devices",
             "link": "https://doi.org/10.1109/COMSNETS63942.2025.10885597",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/5/56/Ieee_blue.jpg",
             "venue": "2025 17th International Conference on COMmunication Systems and NETworks (COMSNETS)",
             "authors": "Aditya Patil; T. S. Sreeram",
             "collapsedHeight": "max-h-32",

@@ -8,9 +8,10 @@ interface ExpandableExperienceItemProps {
     role: string;
     children: React.ReactNode;
     link?: string;
+    logo?: string;
 }
 
-export function ExpandableExperienceItem({ title, role, children, link }: ExpandableExperienceItemProps) {
+export function ExpandableExperienceItem({ title, role, children, link, logo }: ExpandableExperienceItemProps) {
     const [open, setOpen] = useState(false);
 
     return (
@@ -20,6 +21,17 @@ export function ExpandableExperienceItem({ title, role, children, link }: Expand
         >
             <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
                 <div className="flex items-center gap-2">
+                    {logo && (
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-md">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={logo}
+                                alt={`${title} logo`}
+                                className="h-full w-full object-cover"
+                                loading="lazy"
+                            />
+                        </span>
+                    )}
                     <span className="font-medium text-black dark:text-white">{title}</span>
                     {link && (
                         <a
@@ -41,16 +53,18 @@ export function ExpandableExperienceItem({ title, role, children, link }: Expand
                 </div>
             </div>
 
-            {/* Expands on click using the grid-rows 0fr -> 1fr trick */}
-            <div
-                className={`grid transition-[grid-template-rows] duration-300 ease-out ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+            {/* Preview when collapsed, full content when open */}
+            <div className="relative mt-2 max-w-xl">
+                <div
+                    className={`overflow-hidden text-sm leading-relaxed text-gray-500 dark:text-gray-400 transition-[max-height] duration-300 ease-out ${
+                        open ? "max-h-[600px]" : "max-h-[2.8rem]"
                     }`}
-            >
-                <div className="overflow-hidden">
-                    <div className="max-w-xl pt-3 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                        {children}
-                    </div>
+                >
+                    {children}
                 </div>
+                {!open && (
+                    <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-white dark:from-black to-transparent" />
+                )}
             </div>
         </div>
     );
