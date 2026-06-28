@@ -48,6 +48,59 @@ body {
   scrollbar-width: none;
 }
 
+/* ── Navbar entrance shine ─────────────────────────────────────────────
+   A light streak sweeps across the pill while a highlight travels around
+   its edge — the glint glass throws when it turns in the light. */
+@property --nav-shine-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes nav-edge-shine {
+  0%   { --nav-shine-angle: 0deg;   opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { --nav-shine-angle: 360deg; opacity: 0; }
+}
+
+@keyframes nav-streak {
+  0%   { transform: translateX(-180%) skewX(-12deg); opacity: 0; }
+  25%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(420%) skewX(-12deg);  opacity: 0; }
+}
+
+/* glowing line that runs around the pill's edge */
+.nav-edge-shine {
+  background: conic-gradient(
+    from var(--nav-shine-angle),
+    transparent 0deg,
+    rgba(255, 255, 255, 0.95) 45deg,
+    transparent 95deg
+  );
+  padding: 1.5px;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  animation: nav-edge-shine 1.5s ease-in-out 0.45s 1 both;
+}
+
+/* diagonal specular streak gliding across the surface */
+.nav-streak {
+  animation: nav-streak 1.15s ease-in-out 0.5s 1 both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-edge-shine,
+  .nav-streak {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 /* Animated theme toggler — suppress default browser view-transition so JS animation takes over */
 [data-magicui-theme-vt]::view-transition-old(root),
 [data-magicui-theme-vt]::view-transition-new(root) {

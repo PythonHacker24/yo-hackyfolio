@@ -94,7 +94,21 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Glass Island Navbar */}
-      <nav className="fixed bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full border border-gray-200 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/80 px-4 py-3 shadow-sm backdrop-blur-md transition-all hover:bg-white/90 dark:hover:bg-zinc-900 sm:gap-6 sm:px-6">
+      <motion.nav
+        initial={{ opacity: 0, y: 60, scale: 0.8, x: "-50%" }}
+        animate={{ opacity: 1, y: 0, scale: 1, x: "-50%" }}
+        transition={{ type: "spring", stiffness: 260, damping: 15, delay: 0.15 }}
+        className="fixed bottom-6 left-1/2 flex items-center gap-3 overflow-hidden rounded-full border border-gray-200 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/80 px-4 py-3 shadow-sm backdrop-blur-md transition-colors hover:bg-white/90 dark:hover:bg-zinc-900 sm:gap-6 sm:px-6"
+      >
+        {/* Glass shine — runs once as the pill pops in */}
+        <span
+          aria-hidden
+          className="nav-edge-shine pointer-events-none absolute inset-0 -z-10 rounded-full"
+        />
+        <span
+          aria-hidden
+          className="nav-streak pointer-events-none absolute inset-y-0 left-0 -z-10 w-1/3 bg-gradient-to-r from-transparent via-white/80 to-transparent dark:via-white/60"
+        />
         {/* Mode Toggle Switch */}
         <div className="flex items-center">
           <button
@@ -146,7 +160,7 @@ export default function Home() {
         >
           <Icon name="calendar" className="h-5 w-5" />
         </a>
-      </nav>
+      </motion.nav>
 
       {/* QR Code Modal */}
       {showQR && (
