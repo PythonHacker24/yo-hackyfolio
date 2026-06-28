@@ -64,19 +64,13 @@ body {
   100% { --nav-shine-angle: 360deg; opacity: 0; }
 }
 
-@keyframes nav-streak {
-  0%   { transform: translateX(-180%) skewX(-12deg); opacity: 0; }
-  25%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { transform: translateX(420%) skewX(-12deg);  opacity: 0; }
-}
-
-/* glowing line that runs around the pill's edge */
+/* glowing line that runs around the pill's edge — bluish in light mode so it
+   reads against the near-white pill; pure white in dark mode. */
 .nav-edge-shine {
   background: conic-gradient(
     from var(--nav-shine-angle),
     transparent 0deg,
-    rgba(255, 255, 255, 0.95) 45deg,
+    rgba(150, 185, 255, 0.9) 45deg,
     transparent 95deg
   );
   padding: 1.5px;
@@ -88,14 +82,17 @@ body {
   animation: nav-edge-shine 1.5s ease-in-out 0.45s 1 both;
 }
 
-/* diagonal specular streak gliding across the surface */
-.nav-streak {
-  animation: nav-streak 1.15s ease-in-out 0.5s 1 both;
+.dark .nav-edge-shine {
+  background: conic-gradient(
+    from var(--nav-shine-angle),
+    transparent 0deg,
+    rgba(255, 255, 255, 0.95) 45deg,
+    transparent 95deg
+  );
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nav-edge-shine,
-  .nav-streak {
+  .nav-edge-shine {
     animation: none;
     opacity: 0;
   }
