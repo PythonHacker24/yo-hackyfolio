@@ -56,7 +56,8 @@
         "previous": [
           {
             "name": "Entrepreneur First",
-            "role": "Founder in Residence, Bengaluru",
+            "role": "Founder in Residence",
+            "location": "Bengaluru",
             "link": "https://www.joinef.com/",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/9/95/Entrepreneurs_First_Logo.png",
             "body": [
@@ -69,7 +70,8 @@
           },
           {
             "name": "Google Summer of Code 2025",
-            "role": "Emory University, Atlanta, USA",
+            "role": "Emory University",
+            "location": "Atlanta, USA",
             "link": "https://minimalistbook.com/gsoc-final-report-2025/",
             "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xHRLRVUxrSQ9cZ0T4CLQ6aI4NI62iCHO4An0lLXgUw&s=10",
             "body": [
@@ -81,7 +83,8 @@
           },
           {
             "name": "Professional Freelancer (Technical GTM)",
-            "role": "Technical Writer, Tel Aviv, Israel",
+            "role": "Technical Writer",
+            "location": "Tel Aviv, Israel",
             "link": "https://www.upwork.com/freelancers/~0172a072394ece49bb?viewMode=1",
             "logo": "https://play-lh.googleusercontent.com/OtMKLcIcl_wNIhmuXUZT0L72ysVsdekDomOnhIjqAppwqix3wl3iniGGE9xY8AKEqhN9",
             "body": [
@@ -93,7 +96,8 @@
           },
           {
             "name": "Engineering Intern",
-            "role": "Athena Consulting Ltd. Dubai",
+            "role": "Athena Consulting Ltd.",
+            "location": "Dubai",
             "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQF9MMIpP3ksYQ/company-logo_200_200/company-logo_200_200/0/1672242362219/athenaconsulting1_logo?e=1784160000&v=beta&t=_HTwTwnR9MGd3H2HltAtz_z2BwLEzQsO8WhysZ45Cqo",
             "body": [
               "Led the complete system design and deployment architecture for Eumlet, a UAE-based B2B Web3 payments and financial platform (built on Next.js), on AWS infrastructure. Configured Debian EC2 instances, Application Load Balancer (ALB), and NGINX reverse proxy under senior guidance - ensuring high availability, scalability, and secure handling of financial transactions in a regulated environment.",
@@ -189,6 +193,7 @@
         "link": "https://www.doubledart.fun/",
         "subtitle": "Anonymous crush matching for NIT Hamirpur, Class of 2026",
         "image": "/doubledart-logo.svg",
+        "cardImage": "/doubledart-illustration.png",
         "body": [
           "a 3-day social experiment i shipped with a batchmate: graduating students anonymously dart the people they noticed over four years. a crush stays sealed forever unless it is mutual, and only then are both names revealed.",
           "built lean on Supabase and Vercel with college-email Google sign-in. no ops team, no data hoarding, the database was destroyed after the event and only anonymized stats remain."
@@ -211,7 +216,8 @@
       "title": "My YouTube Channel",
       "data": {
         "image": "/youtube-profile.png",
-        "name": "The Race Condition",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
+        "name": "Aditya's YouTube Channel",
         "url": "https://www.youtube.com/@theracecondition",
         "tagline": "where i break down complex systems and engineering ideas",
         "community": {
@@ -220,8 +226,8 @@
           "text": "driven into the Discord community"
         },
         "videos": [
-          { "title": "System Design: Building Dropbox (File Sync & Storage Service)", "url": "https://www.youtube.com/watch?v=6Bkvdyb3pvs" },
-          { "title": "System Design: Building Spotify (Music Streaming Service)", "url": "https://www.youtube.com/watch?v=m84tBP_4DWE" },
+          { "title": "System Design: Building Dropbox", "url": "https://www.youtube.com/watch?v=6Bkvdyb3pvs" },
+          { "title": "System Design: Building Spotify", "url": "https://www.youtube.com/watch?v=m84tBP_4DWE" },
           { "title": "Understanding REST APIs for System Design", "url": "https://www.youtube.com/watch?v=-btg5UuI6dw" },
           { "title": "Top 5 Programming Languages for 2026", "url": "https://www.youtube.com/watch?v=lJXq8o6o0jY" },
           { "title": "Reviewing my 47 Pages GSoC Proposal", "url": "https://www.youtube.com/watch?v=6HOlwQxgqDs" }
@@ -302,7 +308,8 @@
           { "label": "Schedule a meeting", "href": "https://cal.com/adi-patil/30min", "icon": "calendar", "primary": true },
           { "label": "Email me", "href": "mailto:adityapatil24680@gmail.com", "icon": "mail", "primary": false }
         ],
-        "socialsLabel": "Find me on"
+        "socialsLabel": "Find me on",
+        "image": "/walking-thinking.png"
       }
     }
   ]

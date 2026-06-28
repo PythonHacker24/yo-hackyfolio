@@ -1,25 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, MapPin } from "lucide-react";
 
 interface ExpandableExperienceItemProps {
     title: string;
     role: string;
+    location?: string;
     children: React.ReactNode;
     link?: string;
     logo?: string;
 }
 
-export function ExpandableExperienceItem({ title, role, children, link, logo }: ExpandableExperienceItemProps) {
+export function ExpandableExperienceItem({ title, role, location, children, link, logo }: ExpandableExperienceItemProps) {
     const [open, setOpen] = useState(false);
 
     return (
         <div
-            className="group cursor-pointer py-4"
+            className="group cursor-pointer py-5"
             onClick={() => setOpen((v) => !v)}
         >
-            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
+            {/* Row 1: logo + company name + link | chevron */}
+            <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
                     {logo && (
                         <span className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-md">
@@ -45,16 +47,24 @@ export function ExpandableExperienceItem({ title, role, children, link, logo }: 
                         </a>
                     )}
                 </div>
-                <div className="flex items-center gap-2">
-                    <span className="text-sm text-gray-400 dark:text-gray-500">{role}</span>
-                    <ChevronDown
-                        className={`h-3.5 w-3.5 shrink-0 text-gray-300 dark:text-gray-600 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
-                    />
-                </div>
+                <ChevronDown
+                    className={`h-3.5 w-3.5 shrink-0 text-gray-300 dark:text-gray-600 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+                />
             </div>
 
-            {/* Preview when collapsed, full content when open */}
-            <div className="relative mt-2 max-w-xl">
+            {/* Row 2: role | location */}
+            <div className="mt-1.5 flex items-center justify-between gap-4 pl-8">
+                <span className="text-sm text-gray-400 dark:text-gray-500">{role}</span>
+                {location && (
+                    <span className="flex items-center gap-1 text-xs text-gray-400 dark:text-gray-500 shrink-0">
+                        <MapPin className="h-3 w-3" />
+                        {location}
+                    </span>
+                )}
+            </div>
+
+            {/* Expandable body */}
+            <div className="relative mt-3 max-w-xl">
                 <div
                     className={`overflow-hidden text-sm leading-relaxed text-gray-500 dark:text-gray-400 transition-[max-height] duration-300 ease-out ${
                         open ? "max-h-[600px]" : "max-h-[2.8rem]"

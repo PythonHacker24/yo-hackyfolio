@@ -7,6 +7,7 @@ import type { Block } from "../types";
 export interface ExperienceEntry {
   name: string;
   role: string;
+  location?: string;
   link?: string;
   /** Optional logo image URL — rendered as a circular icon before the name. */
   logo?: string;
@@ -69,9 +70,9 @@ export function ExperienceSection({ title, data }: { title: string; data: Experi
         <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-600">
           {previousLabel}
         </h3>
-        <div className="flex flex-col gap-1 rounded-xl border border-gray-200 dark:border-gray-800 px-6 py-2 sm:px-8 sm:py-3">
+        <div className="flex flex-col rounded-xl border border-gray-200 dark:border-gray-800 px-6 sm:px-8 divide-y divide-gray-100 dark:divide-gray-800/60">
           {previous.map((item) => (
-            <ExpandableExperienceItem key={item.name} title={item.name} role={item.role} link={item.link} logo={item.logo}>
+            <ExpandableExperienceItem key={item.name} title={item.name} role={item.role} location={item.location} link={item.link} logo={item.logo}>
               <div className="space-y-2">
                 <RichText blocks={item.body} />
               </div>
