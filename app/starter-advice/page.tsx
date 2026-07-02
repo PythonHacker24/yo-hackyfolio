@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Sparkles } from "lucide-react";
 
@@ -50,18 +49,6 @@ export default function StarterAdvicePage() {
             <Sparkles className="h-3.5 w-3.5" /> Ask ChatGPT about this
             <ArrowUpRight className="h-3 w-3" />
           </a>
-        </div>
-
-        {/* Hero image */}
-        <div className="relative mb-12 aspect-[4/3] w-full overflow-hidden rounded-2xl sm:aspect-[16/10]">
-          <Image
-            src="/starter-advice-hero.png"
-            alt="An illustration of a developer coding at night, warm desk lamp lit, a cat asleep beside a mug labeled Focus, snow falling outside the window."
-            fill
-            priority
-            className="object-cover"
-            sizes="(min-width: 640px) 672px, 100vw"
-          />
         </div>
 
         {/* Body */}
