@@ -1,19 +1,39 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Sparkles } from "lucide-react";
 
 import { ThemeToggle } from "../components/ThemeToggle";
 import { Inline } from "../components/RichText";
 import { CopyEssayButton } from "../components/essay/CopyEssayButton";
-import { ESSAY_TITLE, ESSAY_BLOCKS, ESSAY_MARKDOWN, READING_TIME, CHATGPT_URL } from "./content";
+import { getPost, posts } from "../data/posts";
+import { chatGptUrl, postToMarkdown, readingTime } from "../data/postHelpers";
 
-export const metadata: Metadata = {
-  title: ESSAY_TITLE,
-  description:
-    "A builder's path into software engineering: what I would do if I started college again today.",
-};
+/** Pre-render every post at build time. */
+export function generateStaticParams() {
+  return posts.map((post) => ({ slug: post.slug }));
+}
 
-export default function StarterAdvicePage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPost(slug);
+  if (!post) return {};
+  return { title: post.title, description: post.description };
+}
+
+export default async function PostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getPost(slug);
+  if (!post) notFound();
+
   return (
     <div className="relative flex min-h-screen flex-col items-center bg-white dark:bg-black px-3 pt-16 text-black dark:text-white selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black pb-32 sm:px-4 sm:pt-24 sm:pb-40 overflow-x-hidden transition-colors duration-300">
       {/* Theme Toggle in Top Right */}
@@ -31,17 +51,17 @@ export default function StarterAdvicePage() {
         </Link>
 
         <span className="mb-3 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-          Essay
+          {post.kicker}
         </span>
         <h1 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
-          {ESSAY_TITLE}
+          {post.title}
         </h1>
         <div className="mb-12 flex flex-wrap items-center gap-x-4 gap-y-3">
-          <span className="text-sm text-gray-500 dark:text-gray-400">{READING_TIME}</span>
+          <span className="text-sm text-gray-500 dark:text-gray-400">{readingTime(post)}</span>
           <div className="h-4 w-px bg-gray-200 dark:bg-zinc-700" />
-          <CopyEssayButton text={ESSAY_MARKDOWN} />
+          <CopyEssayButton text={postToMarkdown(post)} />
           <a
-            href={CHATGPT_URL}
+            href={chatGptUrl(post)}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 dark:border-zinc-700 px-3 py-1.5 text-xs font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:border-black hover:text-black dark:hover:border-white dark:hover:text-white"
@@ -53,7 +73,7 @@ export default function StarterAdvicePage() {
 
         {/* Body */}
         <article className="space-y-5 text-base leading-relaxed text-gray-600 dark:text-gray-400">
-          {ESSAY_BLOCKS.map((block, i) => {
+          {post.blocks.map((block, i) => {
             if (block.type === "h2") {
               return (
                 <h2

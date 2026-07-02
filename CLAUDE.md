@@ -294,6 +294,39 @@ Only needed if none of the existing types fit:
 
 TypeScript will error at the `SectionRenderer` switch if you forget step 3.
 
+## Blog posts / essays
+
+Posts are fully templated. **To add a post, append one object to the `posts` array in `app/data/posts.ts` — nothing else.** No new route, component, middleware, or sitemap edits are needed.
+
+Each post:
+```ts
+{
+  slug: "my-post",          // URL becomes /my-post (lowercase-kebab-case)
+  kicker: "Essay",          // small uppercase label above the title
+  title: "My Post Title",
+  description: "One-line meta description for SEO / previews.",
+  date: "2026-07-03",       // YYYY-MM-DD, used for ordering + sitemap
+  blocks: [ ...post blocks ]
+}
+```
+
+A post block is one of:
+```ts
+{ type: "p",    text: "A paragraph with **bold** and [links](https://...)." }
+{ type: "h2",   text: "A section heading" }
+{ type: "list", items: ["First bullet", "Second **bold** bullet"] }
+```
+
+Everything else is derived automatically from that data:
+- the rendered page at `/<slug>` (`app/[slug]/page.tsx`)
+- the raw-markdown version at `/<slug>?format=markdown` (for AI agents / sharing)
+- reading time and the "Ask ChatGPT about this" deep-link (`app/data/postHelpers.ts`)
+- the sitemap entry
+
+To feature a post with the pill above the hero, point `meta.featured.href` in `portfolio.json` at `/<slug>`.
+
+Do not hardcode post content in `app/[slug]/page.tsx` — that file is the fixed template; `posts.ts` is the content.
+
 ## Images
 
 Put image files in `public/`. Reference them in the JSON as `/filename.png` (root-relative path).
