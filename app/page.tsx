@@ -187,7 +187,13 @@ export default function Home() {
               <X className="h-4 w-4" />
             </button>
             <div className="rounded-lg bg-white p-2">
-              <QRCodeSVG value={portfolio.meta.siteUrl} size={200} level="H" includeMargin={false} />
+              {/* The QR link carries the current theme, so scans open in the same look */}
+              <QRCodeSVG
+                value={`${portfolio.meta.siteUrl}?theme=${resolvedTheme === "dark" ? "dark" : "light"}`}
+                size={200}
+                level="H"
+                includeMargin={false}
+              />
             </div>
           </div>
         </div>
