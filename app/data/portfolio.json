@@ -2,7 +2,12 @@
   "meta": {
     "siteUrl": "https://www.justaditya.com/",
     "calendarUrl": "https://cal.com/adi-patil/30min",
-    "email": "adityapatil24680@gmail.com"
+    "email": "adityapatil24680@gmail.com",
+    "featured": {
+      "tag": "Featured",
+      "title": "Advice for your first year of college",
+      "href": "/starter-advice"
+    }
   },
   "socials": [
     { "label": "GitHub", "href": "https://github.com/PythonHacker24", "icon": "github" },

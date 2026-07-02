@@ -155,7 +155,7 @@ export const READING_TIME = `${Math.max(1, Math.round(WORD_COUNT / 200))} min re
  * of the essay (served via ?format=markdown) and forces the reply to open with
  * a summary before turning the advice into a personalized plan.
  */
-export const CHATGPT_PROMPT = `Fetch and read this essay: ${ESSAY_MARKDOWN_URL} — it's "${ESSAY_TITLE}" by Aditya Patil, served as plain markdown.
+export const CHATGPT_PROMPT = `Fetch and read this essay: ${ESSAY_MARKDOWN_URL} - it's "${ESSAY_TITLE}" by Aditya Patil, served as plain markdown.
 
 Start your first reply with a short summary of the essay in a few bullet points. Then ask me where I currently am (year of study, what excites me in tech) and help me turn the essay's advice into a concrete, personalized action plan. Keep it practical and specific. After that, I'll ask follow-up questions about the essay.`;
 

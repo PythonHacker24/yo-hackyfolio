@@ -32,6 +32,12 @@ export function generateMarkdown(data: PortfolioData, time: string): string {
     parts.push(`## About\n\n${intro.join("\n\n")}`);
   }
 
+  // Featured page (small pill on the visual site)
+  if (meta.featured) {
+    const url = new URL(meta.featured.href, meta.siteUrl).toString();
+    parts.push(`**${meta.featured.tag}:** [${meta.featured.title}](${url})`);
+  }
+
   // Experience
   const experience = find(sections, "experience");
   if (experience) {

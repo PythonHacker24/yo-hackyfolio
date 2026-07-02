@@ -32,4 +32,10 @@ export interface PortfolioMeta {
   siteUrl: string;
   calendarUrl: string;
   email: string;
+  /** Optional pill above the hero pointing at a featured page (e.g. an essay). */
+  featured?: {
+    tag: string;
+    title: string;
+    href: string;
+  };
 }

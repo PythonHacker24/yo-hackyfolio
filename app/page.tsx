@@ -89,6 +89,24 @@ export default function Home() {
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="flex w-full max-w-2xl flex-col items-center text-center"
           >
+            {/* Featured pill: small, first thing seen, links to the featured page */}
+            {portfolio.meta.featured && (
+              <Reveal delay={0} className="mb-10">
+                <Link
+                  href={portfolio.meta.featured.href}
+                  className="group inline-flex max-w-full items-center gap-2 rounded-full border border-gray-200 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/80 py-1.5 pl-1.5 pr-3 shadow-sm backdrop-blur-md transition-all hover:-translate-y-0.5 hover:bg-white/90 dark:hover:bg-zinc-900"
+                >
+                  <span className="rounded-full bg-black dark:bg-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white dark:text-black">
+                    {portfolio.meta.featured.tag}
+                  </span>
+                  <span className="truncate text-sm font-medium text-gray-600 dark:text-gray-300 transition-colors group-hover:text-black dark:group-hover:text-white">
+                    {portfolio.meta.featured.title}
+                  </span>
+                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-black dark:group-hover:text-white" />
+                </Link>
+              </Reveal>
+            )}
+
             {portfolio.sections.map((section, i) => (
               <Reveal
                 key={i}
