@@ -316,6 +316,15 @@
         "socialsLabel": "Find me on",
         "image": "/walking-thinking.png"
       }
+    },
+    {
+      "type": "thoughts",
+      "title": "Thoughts",
+      "data": {
+        "count": 3,
+        "viewAllLabel": "View all thoughts",
+        "viewAllHref": "/thoughts"
+      }
     }
   ]
 }

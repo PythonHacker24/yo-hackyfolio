@@ -1,5 +1,7 @@
 import type { Block } from "../components/types";
 import type { PortfolioData, Section } from "../components/sections/registry";
+import { getSortedPosts } from "./posts";
+import { postUrl } from "./postHelpers";
 
 /** Find the first section of a given type, narrowed to its variant. */
 function find<T extends Section["type"]>(
@@ -121,6 +123,15 @@ export function generateMarkdown(data: PortfolioData, time: string): string {
     ];
     if (y.footerLink) lines.push("", `${y.footerLink.label}: ${y.footerLink.url}`);
     parts.push(lines.join("\n"));
+  }
+
+  // Thoughts (essays / notes, pulled from posts.ts)
+  const thoughts = find(sections, "thoughts");
+  if (thoughts) {
+    const items = getSortedPosts()
+      .map((p) => `- [${p.title}](${postUrl(p)}) — ${p.description}`)
+      .join("\n");
+    parts.push(`## ${thoughts.title}\n\n${items}`);
   }
 
   // Get in Touch

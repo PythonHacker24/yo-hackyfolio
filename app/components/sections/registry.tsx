@@ -11,6 +11,7 @@ import { GithubSection, type GithubData } from "./GithubSection";
 import { PublicationsSection, type PublicationsData } from "./PublicationsSection";
 import { RecommendationsSection, type RecommendationsData } from "./RecommendationsSection";
 import { ContactSection, type ContactData } from "./ContactSection";
+import { ThoughtsSection, type ThoughtsData } from "./ThoughtsSection";
 
 /**
  * Discriminated union of every section. Each variant pairs a `type` tag with
@@ -29,7 +30,8 @@ export type Section =
   | { type: "github"; title: string; data: GithubData }
   | { type: "publications"; title: string; data: PublicationsData }
   | { type: "recommendations"; title: string; data: RecommendationsData }
-  | { type: "contact"; title: string; data: ContactData };
+  | { type: "contact"; title: string; data: ContactData }
+  | { type: "thoughts"; title: string; data: ThoughtsData };
 
 /** Top-level shape of `portfolio.json`. */
 export interface PortfolioData {
@@ -69,5 +71,7 @@ export function SectionRenderer({ section, ctx }: { section: Section; ctx: Secti
       return <RecommendationsSection title={section.title} data={section.data} />;
     case "contact":
       return <ContactSection title={section.title} data={section.data} socials={ctx.socials} />;
+    case "thoughts":
+      return <ThoughtsSection title={section.title} data={section.data} />;
   }
 }
