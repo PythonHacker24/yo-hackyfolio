@@ -34,6 +34,139 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: "learning-to-code-has-changed",
+    kicker: "Essay",
+    title: "Learning to Code Has Changed",
+    description:
+      "Most programming advice online predates AI. Here's how I'd start learning to code today, and why understanding the fundamentals still matters.",
+    date: "2026-07-03",
+    blocks: [
+      {
+        type: "p",
+        text: "One thing that surprises me is that most programming advice on the internet was created before AI became a part of everyday development.",
+      },
+      {
+        type: "p",
+        text: "That does not mean the advice is bad. In fact, a lot of it is still valuable. But the way we learn and write software has changed so much that beginners should approach it differently today.",
+      },
+
+      { type: "h2", text: "How it was when I started" },
+      {
+        type: "p",
+        text: "I started taking coding seriously in 2022 during college.",
+      },
+      {
+        type: "p",
+        text: "At that time, ChatGPT either did not exist or had not become popular yet. AI was not something developers relied on every day.",
+      },
+      { type: "p", text: "Writing software was a very manual process." },
+      {
+        type: "p",
+        text: "Even building a small feature took time because you had to write almost everything yourself. Back then, writing 200 to 300 lines of code in a day felt like a productive day. Today, AI can generate thousands of lines in a few minutes. The number of lines does not matter, but the speed of development has changed completely.",
+      },
+      {
+        type: "p",
+        text: "I also remember how much time we spent searching for things.",
+      },
+      { type: "p", text: "If I needed an encryption library, I would:" },
+      {
+        type: "list",
+        items: [
+          "Search for it on Google.",
+          "Compare different libraries.",
+          "Read documentation.",
+          "Figure out which one was the standard choice.",
+          "Learn how to use it before writing any code.",
+        ],
+      },
+      { type: "p", text: "That was simply how software development worked." },
+      {
+        type: "p",
+        text: "Now, AI can usually suggest the right library, explain why it is a good choice, and even generate the implementation. Looking back, it almost feels funny how much time we spent doing things that now happen in seconds.",
+      },
+
+      { type: "h2", text: "What has changed" },
+      { type: "p", text: "The biggest change is not that AI writes code." },
+      {
+        type: "p",
+        text: "The biggest change is that AI has become an excellent teacher and assistant.",
+      },
+      {
+        type: "p",
+        text: "Instead of spending hours searching through documentation or watching long tutorials, you can ask questions whenever you get stuck.",
+      },
+      {
+        type: "p",
+        text: "You can learn much faster because you have someone available to explain concepts, give examples, and answer follow-up questions instantly.",
+      },
+
+      { type: "h2", text: "How I would learn today" },
+      {
+        type: "p",
+        text: "If I were starting from scratch again, I would follow a very different approach.",
+      },
+      {
+        type: "p",
+        text: "**1. Learn the fundamentals quickly.** First, I would learn the basics of one programming language. Use tools like ChatGPT, Claude, or Grok to understand concepts faster. Ask as many questions as you want. Experiment with examples. Build small programs until the syntax starts feeling natural. The goal is not to memorize everything. The goal is to understand how programming works.",
+      },
+      {
+        type: "p",
+        text: "**2. Start building immediately.** Once you understand the basics, stop spending months consuming tutorials. Start building projects. This is where the real learning happens.",
+      },
+      {
+        type: "p",
+        text: "**3. Let AI write code with you.** As soon as you are comfortable reading code, start using AI to generate parts of your projects. Do not think of AI as something that replaces learning. Think of it as a very fast teammate. Generate code, review it carefully, understand why it works, make changes, and keep moving.",
+      },
+
+      { type: "h2", text: "Do you still need to learn programming?" },
+      { type: "p", text: "This is probably the biggest debate today." },
+      {
+        type: "p",
+        text: "Many people will still tell you that you need to know programming deeply.",
+      },
+      { type: "p", text: "I agree, but maybe not in the same way as before." },
+      {
+        type: "p",
+        text: "AI can already do a huge amount of the typing for you. It can generate functions, fix bugs, write tests, and even build complete features.",
+      },
+      { type: "p", text: "But AI is not responsible for the final product." },
+      { type: "p", text: "You are." },
+      {
+        type: "p",
+        text: "Someone still has to review the code, understand the architecture, catch mistakes, and decide whether the solution actually makes sense. That requires understanding the fundamentals.",
+      },
+      {
+        type: "p",
+        text: "You do not need to memorize every API or every library anymore. You do need enough knowledge to judge whether the AI is doing the right thing.",
+      },
+
+      { type: "h2", text: "My advice" },
+      { type: "p", text: "If I were beginning today, I would:" },
+      {
+        type: "list",
+        items: [
+          "Learn one programming language as quickly as possible using AI.",
+          "Understand the core concepts instead of memorizing syntax.",
+          "Start building real projects early.",
+          "Use AI agents to speed up development.",
+          "Always review and understand the code before accepting it.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The developers who learn fastest today are not the ones who avoid AI.",
+      },
+      {
+        type: "p",
+        text: "They are the ones who understand enough to work with AI effectively.",
+      },
+      {
+        type: "p",
+        text: "That is the biggest difference between learning to code a few years ago and learning to code today.",
+      },
+    ],
+  },
+  {
     slug: "thinking-before-building",
     kicker: "Essay",
     title: "Thinking Before Building",
