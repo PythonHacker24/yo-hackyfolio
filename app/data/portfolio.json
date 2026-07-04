@@ -2,12 +2,7 @@
   "meta": {
     "siteUrl": "https://www.justaditya.com/",
     "calendarUrl": "https://cal.com/adi-patil/30min",
-    "email": "adityapatil24680@gmail.com",
-    "featured": {
-      "tag": "Featured",
-      "title": "Advice for your first year of college",
-      "href": "/starter-advice"
-    }
+    "email": "adityapatil24680@gmail.com"
   },
   "socials": [
     {
@@ -289,7 +284,7 @@
       "slug": "thinking-before-building",
       "kicker": "Essay",
       "title": "Thinking Before Building",
-      "description": "A startup hackathon taught me that clarity beats speed — execution without direction just moves you faster in the wrong direction.",
+      "description": "A startup hackathon taught me that clarity beats speed \u2014 execution without direction just moves you faster in the wrong direction.",
       "date": "2026-07-03",
       "blocks": [
         {
@@ -502,7 +497,7 @@
       "data": {
         "image": "/me.png",
         "name": "Aditya Patil",
-        "phonetic": "/əˈdɪtjə pɑːˈtiːl/",
+        "phonetic": "/\u0259\u02c8d\u026atj\u0259 p\u0251\u02d0\u02c8ti\u02d0l/",
         "noun": "noun",
         "timezone": {
           "label": "IST",
@@ -804,6 +799,15 @@
       }
     },
     {
+      "type": "thoughts",
+      "title": "Thinking",
+      "data": {
+        "count": 3,
+        "viewAllLabel": "View more",
+        "viewAllHref": "/thoughts"
+      }
+    },
+    {
       "type": "youtube",
       "title": "My YouTube Channel",
       "data": {
@@ -934,15 +938,6 @@
         ],
         "socialsLabel": "Find me on",
         "image": "/walking-thinking.png"
-      }
-    },
-    {
-      "type": "thoughts",
-      "title": "Thoughts",
-      "data": {
-        "count": 3,
-        "viewAllLabel": "View all thoughts",
-        "viewAllHref": "/thoughts"
       }
     }
   ]
