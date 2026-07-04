@@ -10,12 +10,491 @@
     }
   },
   "socials": [
-    { "label": "GitHub", "href": "https://github.com/PythonHacker24", "icon": "github" },
-    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/aditya-patil-260a631b2/", "icon": "linkedin" },
-    { "label": "X", "href": "https://x.com/firecaffeine", "icon": "x" },
-    { "label": "YouTube", "href": "https://youtube.com/@theracecondition", "icon": "youtube" },
-    { "label": "Discord", "href": "https://discord.gg/ry4YCJaShK", "icon": "discord" },
-    { "label": "Medium", "href": "https://medium.com/@adityapatil24680", "icon": "medium" }
+    {
+      "label": "GitHub",
+      "href": "https://github.com/PythonHacker24",
+      "icon": "github"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/aditya-patil-260a631b2/",
+      "icon": "linkedin"
+    },
+    {
+      "label": "X",
+      "href": "https://x.com/firecaffeine",
+      "icon": "x"
+    },
+    {
+      "label": "YouTube",
+      "href": "https://youtube.com/@theracecondition",
+      "icon": "youtube"
+    },
+    {
+      "label": "Discord",
+      "href": "https://discord.gg/ry4YCJaShK",
+      "icon": "discord"
+    },
+    {
+      "label": "Medium",
+      "href": "https://medium.com/@adityapatil24680",
+      "icon": "medium"
+    }
+  ],
+  "posts": [
+    {
+      "slug": "consumer-design",
+      "kicker": "Essay",
+      "title": "Thoughtful Design for Consumer Apps",
+      "description": "Consumer products are judged before they are used. Good design is not decoration, it is the removal of effort.",
+      "date": "2026-07-04",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "I keep coming back to the design of Wabi, and not because of the product itself."
+        },
+        {
+          "type": "p",
+          "text": "When I first saw it, I had no interest in using it. I do not need an app builder. But the design still gave me two strong signals. It felt refined, not like an experiment or an unfinished MVP. And it looked effortless, like I would not have to spend any mental energy figuring it out."
+        },
+        {
+          "type": "p",
+          "text": "Those two signals made trying it feel like a decision with nothing to lose. That is when I realized the real lesson was not about design. It was about consumer products."
+        },
+        {
+          "type": "h2",
+          "text": "The promise a product makes"
+        },
+        {
+          "type": "p",
+          "text": "A consumer product makes a promise the moment someone sees it. Before people understand the technology or experience the value, they judge whether it feels worth trying."
+        },
+        {
+          "type": "p",
+          "text": "This is where consumer products differ from B2B. People say design does not matter while you are proving a concept, and in B2B that advice mostly works. Users tolerate friction when the underlying technology solves an important problem. Consumer products get no such patience. Perception is part of the product, and if something feels complicated, people leave before they ever discover the value."
+        },
+        {
+          "type": "h2",
+          "text": "Good design reduces effort"
+        },
+        {
+          "type": "p",
+          "text": "Good consumer design is not about making everything beautiful. It is not gradients, animations, or visual effects."
+        },
+        {
+          "type": "p",
+          "text": "It is about reducing effort."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Few colors and few buttons.",
+            "Clear hierarchy.",
+            "Visuals that earn their place.",
+            "An interface that quietly says: you do not have to think, just start."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The best consumer products feel almost agentic. They give the impression that the product will do the work while you simply guide it."
+        },
+        {
+          "type": "h2",
+          "text": "Why this matters more now"
+        },
+        {
+          "type": "p",
+          "text": "AI products compete for attention every day. Someone scrolling Instagram or TikTok has a few seconds to decide whether an app is worth downloading. A powerful result paired with a clean, minimal interface reads as easy to use, and that perception alone lowers the barrier to trying it."
+        },
+        {
+          "type": "p",
+          "text": "People rarely separate design from capability. A simple interface makes a product feel more capable because it makes the work ahead feel smaller."
+        },
+        {
+          "type": "p",
+          "text": "So the lesson is not that every product should look beautiful. It is that every element should earn its place, every interaction should reduce cognitive effort, and getting started should feel like the easiest decision a user can make."
+        }
+      ]
+    },
+    {
+      "slug": "learning-to-code-has-changed",
+      "kicker": "Essay",
+      "title": "Learning to Code Has Changed",
+      "description": "Most programming advice online predates AI. Here's how I'd start learning to code today, and why understanding the fundamentals still matters.",
+      "date": "2026-07-03",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "One thing that surprises me is that most programming advice on the internet was created before AI became a part of everyday development."
+        },
+        {
+          "type": "p",
+          "text": "That does not mean the advice is bad. In fact, a lot of it is still valuable. But the way we learn and write software has changed so much that beginners should approach it differently today."
+        },
+        {
+          "type": "h2",
+          "text": "How it was when I started"
+        },
+        {
+          "type": "p",
+          "text": "I started taking coding seriously in 2022 during college."
+        },
+        {
+          "type": "p",
+          "text": "At that time, ChatGPT either did not exist or had not become popular yet. AI was not something developers relied on every day."
+        },
+        {
+          "type": "p",
+          "text": "Writing software was a very manual process."
+        },
+        {
+          "type": "p",
+          "text": "Even building a small feature took time because you had to write almost everything yourself. Back then, writing 200 to 300 lines of code in a day felt like a productive day. Today, AI can generate thousands of lines in a few minutes. The number of lines does not matter, but the speed of development has changed completely."
+        },
+        {
+          "type": "p",
+          "text": "I also remember how much time we spent searching for things."
+        },
+        {
+          "type": "p",
+          "text": "If I needed an encryption library, I would:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Search for it on Google.",
+            "Compare different libraries.",
+            "Read documentation.",
+            "Figure out which one was the standard choice.",
+            "Learn how to use it before writing any code."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "That was simply how software development worked."
+        },
+        {
+          "type": "p",
+          "text": "Now, AI can usually suggest the right library, explain why it is a good choice, and even generate the implementation. Looking back, it almost feels funny how much time we spent doing things that now happen in seconds."
+        },
+        {
+          "type": "h2",
+          "text": "What has changed"
+        },
+        {
+          "type": "p",
+          "text": "The biggest change is not that AI writes code."
+        },
+        {
+          "type": "p",
+          "text": "The biggest change is that AI has become an excellent teacher and assistant."
+        },
+        {
+          "type": "p",
+          "text": "Instead of spending hours searching through documentation or watching long tutorials, you can ask questions whenever you get stuck."
+        },
+        {
+          "type": "p",
+          "text": "You can learn much faster because you have someone available to explain concepts, give examples, and answer follow-up questions instantly."
+        },
+        {
+          "type": "h2",
+          "text": "How I would learn today"
+        },
+        {
+          "type": "p",
+          "text": "If I were starting from scratch again, I would follow a very different approach."
+        },
+        {
+          "type": "p",
+          "text": "**1. Learn the fundamentals quickly.** First, I would learn the basics of one programming language. Use tools like ChatGPT, Claude, or Grok to understand concepts faster. Ask as many questions as you want. Experiment with examples. Build small programs until the syntax starts feeling natural. The goal is not to memorize everything. The goal is to understand how programming works."
+        },
+        {
+          "type": "p",
+          "text": "**2. Start building immediately.** Once you understand the basics, stop spending months consuming tutorials. Start building projects. This is where the real learning happens."
+        },
+        {
+          "type": "p",
+          "text": "**3. Let AI write code with you.** As soon as you are comfortable reading code, start using AI to generate parts of your projects. Do not think of AI as something that replaces learning. Think of it as a very fast teammate. Generate code, review it carefully, understand why it works, make changes, and keep moving."
+        },
+        {
+          "type": "h2",
+          "text": "Do you still need to learn programming?"
+        },
+        {
+          "type": "p",
+          "text": "This is probably the biggest debate today."
+        },
+        {
+          "type": "p",
+          "text": "Many people will still tell you that you need to know programming deeply."
+        },
+        {
+          "type": "p",
+          "text": "I agree, but maybe not in the same way as before."
+        },
+        {
+          "type": "p",
+          "text": "AI can already do a huge amount of the typing for you. It can generate functions, fix bugs, write tests, and even build complete features."
+        },
+        {
+          "type": "p",
+          "text": "But AI is not responsible for the final product."
+        },
+        {
+          "type": "p",
+          "text": "You are."
+        },
+        {
+          "type": "p",
+          "text": "Someone still has to review the code, understand the architecture, catch mistakes, and decide whether the solution actually makes sense. That requires understanding the fundamentals."
+        },
+        {
+          "type": "p",
+          "text": "You do not need to memorize every API or every library anymore. You do need enough knowledge to judge whether the AI is doing the right thing."
+        },
+        {
+          "type": "h2",
+          "text": "My advice"
+        },
+        {
+          "type": "p",
+          "text": "If I were beginning today, I would:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Learn one programming language as quickly as possible using AI.",
+            "Understand the core concepts instead of memorizing syntax.",
+            "Start building real projects early.",
+            "Use AI agents to speed up development.",
+            "Always review and understand the code before accepting it."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The developers who learn fastest today are not the ones who avoid AI."
+        },
+        {
+          "type": "p",
+          "text": "They are the ones who understand enough to work with AI effectively."
+        },
+        {
+          "type": "p",
+          "text": "That is the biggest difference between learning to code a few years ago and learning to code today."
+        }
+      ]
+    },
+    {
+      "slug": "thinking-before-building",
+      "kicker": "Essay",
+      "title": "Thinking Before Building",
+      "description": "A startup hackathon taught me that clarity beats speed — execution without direction just moves you faster in the wrong direction.",
+      "date": "2026-07-03",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "One of the biggest lessons I learned in college did not come from a classroom or while writing code. It came from a startup hackathon in Bengaluru."
+        },
+        {
+          "type": "p",
+          "text": "During the summer after my third year, I was working as a Google Summer of Code contributor when I got invited to an in-person startup hackathon. The goal was very different from a normal hackathon. It was designed to simulate the early days of a startup. You had to find a co-founder, work together for 24 hours, and pitch a product the next day. It was less about building software and more about how you think."
+        },
+        {
+          "type": "p",
+          "text": "As soon as the event started, the room became chaotic. Everyone was pitching ideas, switching teammates, talking to mentors, and trying to build something as quickly as possible. The atmosphere made it feel like every minute mattered."
+        },
+        {
+          "type": "p",
+          "text": "I teamed up with someone who was surprisingly calm. While everyone else rushed to build, we spent hours just talking. We discussed the future, different markets, and possible ideas. We walked outside the venue, kept asking questions, and challenged our assumptions. We had not written a single line of code."
+        },
+        {
+          "type": "p",
+          "text": "At one point, he said something that completely changed the way I think."
+        },
+        {
+          "type": "p",
+          "text": "**\"We have 24 hours. We are engineers. We can build the product in the last hour if we know exactly what we want to build. We should spend most of our time thinking.\"**"
+        },
+        {
+          "type": "p",
+          "text": "That sentence stayed with me."
+        },
+        {
+          "type": "p",
+          "text": "Everyone else was reacting to the pressure around them. We chose to ignore the noise and focus on understanding the problem first. We talked to mentors, changed our ideas multiple times, and kept refining our thinking instead of rushing into execution."
+        },
+        {
+          "type": "p",
+          "text": "That experience taught me that clarity is often more valuable than speed. Before doing anything, understand the rules of the game. Ask whether the pressure is real or whether you are simply following the crowd. Once you understand the situation, trust yourself enough to think independently."
+        },
+        {
+          "type": "p",
+          "text": "As engineers, we often believe that execution is everything. But execution without direction only makes you move faster in the wrong direction. Good thinking is what gives execution its value."
+        },
+        {
+          "type": "p",
+          "text": "Looking back, that hackathon was the first time I moved beyond the mindset of simply building things. It taught me to slow down, think clearly, and make decisions with intention."
+        },
+        {
+          "type": "p",
+          "text": "The next day, we presented our idea, and both of us were selected. Of course, getting selected felt great, but that was not the biggest win. The real reward was learning a way of thinking that has stayed with me ever since."
+        }
+      ]
+    },
+    {
+      "slug": "starter-advice",
+      "kicker": "Essay",
+      "title": "The Advice I Wish Someone Gave Me in My First Year of College",
+      "description": "A builder's path into software engineering: what I would do if I started college again today.",
+      "date": "2025-01-01",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If you're starting college and want to become a software engineer, the first thing I want you to know is this:"
+        },
+        {
+          "type": "p",
+          "text": "**Your branch does not decide your future.**"
+        },
+        {
+          "type": "p",
+          "text": "I'm from Electrical Engineering, and today I work as a software engineer. I have seen people from Civil, Mechanical, Chemical, and many other branches become amazing developers. Being in Computer Science definitely helps because many of the concepts you study are useful in software engineering. But today, almost everything can be learned online. Your skills will matter much more than your degree."
+        },
+        {
+          "type": "p",
+          "text": "I believe there are two different paths into software engineering."
+        },
+        {
+          "type": "p",
+          "text": "The first path is the traditional one. You focus on Data Structures and Algorithms (DSA), maintain a good CGPA, prepare for coding interviews, and eventually learn system design. This is a great path that has helped thousands of people build successful careers in top companies. If this is your goal, there are already many excellent resources available that explain it much better than I can."
+        },
+        {
+          "type": "p",
+          "text": "This article is for people who want to become builders."
+        },
+        {
+          "type": "p",
+          "text": "If you enjoy creating products, experimenting with ideas, working at startups, or even building your own company someday, then this path might be a better fit for you."
+        },
+        {
+          "type": "p",
+          "text": "My own journey started in my first year of college. I built projects that were honestly not very good, but every project taught me something new. Later, I joined a startup as an intern, contributed to Google Summer of Code, tried building my own startup, got my first customers, and eventually joined a YC-backed startup as a software engineer. None of these opportunities came because I solved hundreds of coding questions. They came because I kept building."
+        },
+        {
+          "type": "p",
+          "text": "If I had to start again today, this is what I would do."
+        },
+        {
+          "type": "h2",
+          "text": "1. Understand what is happening in technology"
+        },
+        {
+          "type": "p",
+          "text": "Every few years, a new field creates exciting opportunities. Right now, AI and AI agents are changing the industry. A few years ago, it was Web3. A few years from now, it will probably be something else."
+        },
+        {
+          "type": "p",
+          "text": "Instead of asking, \"Which programming language should I learn?\", first ask, \"What is changing in the world?\""
+        },
+        {
+          "type": "p",
+          "text": "Learn about the technology at a high level before writing code. Watch product demos, read blogs, understand use cases, and see how people are using it to solve real problems."
+        },
+        {
+          "type": "h2",
+          "text": "2. Choose technologies based on your interests"
+        },
+        {
+          "type": "p",
+          "text": "Once you understand an industry, choosing technologies becomes much easier."
+        },
+        {
+          "type": "p",
+          "text": "For example:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Interested in AI? Learn Python.",
+            "Interested in web products? Learn JavaScript or TypeScript.",
+            "Interested in backend systems? Learn databases, APIs, and system design concepts."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Do not follow random roadmaps just because someone else recommends them. Build your own roadmap based on what excites you."
+        },
+        {
+          "type": "h2",
+          "text": "3. Learn full stack development"
+        },
+        {
+          "type": "p",
+          "text": "I still recommend learning full stack development because it teaches you how complete products are built."
+        },
+        {
+          "type": "p",
+          "text": "Frontend has become much easier with AI tools, but understanding backend systems is still extremely valuable. Learn about databases, APIs, authentication, servers, and how different parts of an application work together. These concepts will stay useful no matter how technology changes."
+        },
+        {
+          "type": "h2",
+          "text": "4. Start building as early as possible"
+        },
+        {
+          "type": "p",
+          "text": "The biggest mistake students make is waiting until they feel ready."
+        },
+        {
+          "type": "p",
+          "text": "You do not need to wait."
+        },
+        {
+          "type": "p",
+          "text": "Write code in your first year. Build projects during your first semester. They will not be perfect, and that is completely fine. Every project will teach you something that no tutorial ever can."
+        },
+        {
+          "type": "h2",
+          "text": "5. Use AI, but understand what it is doing"
+        },
+        {
+          "type": "p",
+          "text": "AI is an incredible learning tool."
+        },
+        {
+          "type": "p",
+          "text": "Use it to write code, explain concepts, and help you build projects faster. But do not blindly copy everything it generates. Read the code, understand it, modify it, and experiment with it. The goal is to learn, not just to finish projects quickly."
+        },
+        {
+          "type": "h2",
+          "text": "6. Work with startups if you get the opportunity"
+        },
+        {
+          "type": "p",
+          "text": "Startups teach you things that are difficult to learn anywhere else."
+        },
+        {
+          "type": "p",
+          "text": "You get real responsibility, work on meaningful problems, and learn much faster because every day brings a new challenge. It is not the easiest path, but it is one of the fastest ways to grow as an engineer."
+        },
+        {
+          "type": "p",
+          "text": "Finally, remember that college gives you something you will never have again: time to experiment."
+        },
+        {
+          "type": "p",
+          "text": "Use these four years to explore different ideas, build projects, contribute to open source, launch products, and maybe even earn your first revenue. You do not have to build something perfect. You just have to keep building."
+        },
+        {
+          "type": "p",
+          "text": "Four years is enough time to completely change your life if you use it well."
+        },
+        {
+          "type": "p",
+          "text": "So start today. Pick something that excites you, write your first line of code, and keep building."
+        }
+      ]
+    }
   ],
   "sections": [
     {
@@ -25,7 +504,10 @@
         "name": "Aditya Patil",
         "phonetic": "/əˈdɪtjə pɑːˈtiːl/",
         "noun": "noun",
-        "timezone": { "label": "IST", "tz": "Asia/Kolkata" },
+        "timezone": {
+          "label": "IST",
+          "tz": "Asia/Kolkata"
+        },
         "intro": [
           "a full-stack developer and [product builder](https://en.wikipedia.org/wiki/Product_design) with deep experience across engineering, product strategy, and user-centric design.",
           "a [polymath](https://en.wikipedia.org/wiki/Polymath) who bridges technical architecture with business outcomes to create impactful, scalable solutions."
@@ -122,52 +604,130 @@
           {
             "name": "Languages",
             "skills": [
-              { "name": "Go", "slug": "go" },
-              { "name": "Python", "slug": "python" },
-              { "name": "TypeScript", "slug": "typescript" },
-              { "name": "JavaScript", "slug": "javascript" },
-              { "name": "C++", "slug": "cplusplus" }
+              {
+                "name": "Go",
+                "slug": "go"
+              },
+              {
+                "name": "Python",
+                "slug": "python"
+              },
+              {
+                "name": "TypeScript",
+                "slug": "typescript"
+              },
+              {
+                "name": "JavaScript",
+                "slug": "javascript"
+              },
+              {
+                "name": "C++",
+                "slug": "cplusplus"
+              }
             ]
           },
           {
             "name": "Frontend",
             "skills": [
-              { "name": "React", "slug": "react" },
-              { "name": "Next.js", "slug": "nextdotjs" },
-              { "name": "Tailwind CSS", "slug": "tailwindcss" },
-              { "name": "Shadcn UI", "slug": "shadcnui" },
-              { "name": "Framer Motion", "slug": "framer" }
+              {
+                "name": "React",
+                "slug": "react"
+              },
+              {
+                "name": "Next.js",
+                "slug": "nextdotjs"
+              },
+              {
+                "name": "Tailwind CSS",
+                "slug": "tailwindcss"
+              },
+              {
+                "name": "Shadcn UI",
+                "slug": "shadcnui"
+              },
+              {
+                "name": "Framer Motion",
+                "slug": "framer"
+              }
             ]
           },
           {
             "name": "Backend & DB",
             "skills": [
-              { "name": "FastAPI", "slug": "fastapi" },
-              { "name": "Node.js", "slug": "nodedotjs" },
-              { "name": "PostgreSQL", "slug": "postgresql" },
-              { "name": "MongoDB", "slug": "mongodb" },
-              { "name": "Redis", "slug": "redis" },
-              { "name": "FireBase", "slug": "firebase" }
+              {
+                "name": "FastAPI",
+                "slug": "fastapi"
+              },
+              {
+                "name": "Node.js",
+                "slug": "nodedotjs"
+              },
+              {
+                "name": "PostgreSQL",
+                "slug": "postgresql"
+              },
+              {
+                "name": "MongoDB",
+                "slug": "mongodb"
+              },
+              {
+                "name": "Redis",
+                "slug": "redis"
+              },
+              {
+                "name": "FireBase",
+                "slug": "firebase"
+              }
             ]
           },
           {
             "name": "Infra & Tools",
             "skills": [
-              { "name": "Docker", "slug": "docker" },
-              { "name": "Google Cloud", "slug": "googlecloud" },
-              { "name": "Vercel", "slug": "vercel" },
-              { "name": "Git", "slug": "git" },
-              { "name": "GitHub", "slug": "github" },
-              { "name": "Linux", "slug": "linux" },
-              { "name": "Nginx", "slug": "nginx" }
+              {
+                "name": "Docker",
+                "slug": "docker"
+              },
+              {
+                "name": "Google Cloud",
+                "slug": "googlecloud"
+              },
+              {
+                "name": "Vercel",
+                "slug": "vercel"
+              },
+              {
+                "name": "Git",
+                "slug": "git"
+              },
+              {
+                "name": "GitHub",
+                "slug": "github"
+              },
+              {
+                "name": "Linux",
+                "slug": "linux"
+              },
+              {
+                "name": "Nginx",
+                "slug": "nginx"
+              }
             ]
           },
           {
             "name": "AI & ML",
             "skills": [
-              { "name": "Hugging Face", "slug": "huggingface" },
-              { "name": "PyTorch", "slug": "pytorch" },
-              { "name": "Pandas", "slug": "pandas" }
+              {
+                "name": "Hugging Face",
+                "slug": "huggingface"
+              },
+              {
+                "name": "PyTorch",
+                "slug": "pytorch"
+              },
+              {
+                "name": "Pandas",
+                "slug": "pandas"
+              }
             ]
           }
         ]
@@ -204,16 +764,43 @@
           "built lean on Supabase and Vercel with college-email Google sign-in. no ops team, no data hoarding, the database was destroyed after the event and only anonymized stats remain."
         ],
         "stats": [
-          { "value": "201", "label": "sign-ups in 3 days" },
-          { "value": "238", "label": "crushes sent" },
-          { "value": "11", "label": "mutual pairs matched" },
-          { "value": "766", "label": "unique visitors" },
-          { "value": "80.7K", "label": "Supabase requests" },
-          { "value": "3.2K", "label": "page views" },
-          { "value": "85%", "label": "mobile traffic" },
-          { "value": "9.2%", "label": "crushes reciprocated" }
+          {
+            "value": "201",
+            "label": "sign-ups in 3 days"
+          },
+          {
+            "value": "238",
+            "label": "crushes sent"
+          },
+          {
+            "value": "11",
+            "label": "mutual pairs matched"
+          },
+          {
+            "value": "766",
+            "label": "unique visitors"
+          },
+          {
+            "value": "80.7K",
+            "label": "Supabase requests"
+          },
+          {
+            "value": "3.2K",
+            "label": "page views"
+          },
+          {
+            "value": "85%",
+            "label": "mobile traffic"
+          },
+          {
+            "value": "9.2%",
+            "label": "crushes reciprocated"
+          }
         ],
-        "footerLink": { "label": "Read the full case study", "url": "https://www.doubledart.fun/case-study" }
+        "footerLink": {
+          "label": "Read the full case study",
+          "url": "https://www.doubledart.fun/case-study"
+        }
       }
     },
     {
@@ -231,13 +818,31 @@
           "text": "driven into the Discord community"
         },
         "videos": [
-          { "title": "System Design: Building Dropbox", "url": "https://www.youtube.com/watch?v=6Bkvdyb3pvs" },
-          { "title": "System Design: Building Spotify", "url": "https://www.youtube.com/watch?v=m84tBP_4DWE" },
-          { "title": "Understanding REST APIs for System Design", "url": "https://www.youtube.com/watch?v=-btg5UuI6dw" },
-          { "title": "Top 5 Programming Languages for 2026", "url": "https://www.youtube.com/watch?v=lJXq8o6o0jY" },
-          { "title": "Reviewing my 47 Pages GSoC Proposal", "url": "https://www.youtube.com/watch?v=6HOlwQxgqDs" }
+          {
+            "title": "System Design: Building Dropbox",
+            "url": "https://www.youtube.com/watch?v=6Bkvdyb3pvs"
+          },
+          {
+            "title": "System Design: Building Spotify",
+            "url": "https://www.youtube.com/watch?v=m84tBP_4DWE"
+          },
+          {
+            "title": "Understanding REST APIs for System Design",
+            "url": "https://www.youtube.com/watch?v=-btg5UuI6dw"
+          },
+          {
+            "title": "Top 5 Programming Languages for 2026",
+            "url": "https://www.youtube.com/watch?v=lJXq8o6o0jY"
+          },
+          {
+            "title": "Reviewing my 47 Pages GSoC Proposal",
+            "url": "https://www.youtube.com/watch?v=6HOlwQxgqDs"
+          }
         ],
-        "footerLink": { "label": "and much more on the channel", "url": "https://www.youtube.com/@theracecondition/videos" }
+        "footerLink": {
+          "label": "and much more on the channel",
+          "url": "https://www.youtube.com/@theracecondition/videos"
+        }
       }
     },
     {
@@ -249,7 +854,9 @@
             "title": "National Institute of Technology Hamirpur",
             "role": "Electrical Engineering",
             "logo": "https://nith.ac.in/uploads/topics/nit-logo15954991401255.jpg",
-            "body": ["2022 - Surviving"]
+            "body": [
+              "2022 - Surviving"
+            ]
           }
         ]
       }
@@ -257,7 +864,9 @@
     {
       "type": "github",
       "title": "GitHub Contributions",
-      "data": { "username": "PythonHacker24" }
+      "data": {
+        "username": "PythonHacker24"
+      }
     },
     {
       "type": "publications",
@@ -310,8 +919,18 @@
         "heading": "Let's build something together",
         "subheading": "open to opportunities, collaborations, and good conversations. book a slot on my calendar or drop me a line.",
         "ctas": [
-          { "label": "Schedule a meeting", "href": "https://cal.com/adi-patil/30min", "icon": "calendar", "primary": true },
-          { "label": "Email me", "href": "mailto:adityapatil24680@gmail.com", "icon": "mail", "primary": false }
+          {
+            "label": "Schedule a meeting",
+            "href": "https://cal.com/adi-patil/30min",
+            "icon": "calendar",
+            "primary": true
+          },
+          {
+            "label": "Email me",
+            "href": "mailto:adityapatil24680@gmail.com",
+            "icon": "mail",
+            "primary": false
+          }
         ],
         "socialsLabel": "Find me on",
         "image": "/walking-thinking.png"

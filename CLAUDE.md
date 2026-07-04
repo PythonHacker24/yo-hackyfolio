@@ -23,6 +23,7 @@ The page (`app/page.tsx`) loops over the `sections` array and renders each one. 
 portfolio.json
   meta        -> siteUrl, calendarUrl, email
   socials[]   -> label, href, icon (used in navbar + contact section)
+  posts[]     -> blog posts / essays (see "Blog posts / essays" below)
   sections[]  -> ordered list of sections (order = render order on page)
 ```
 
@@ -296,25 +297,26 @@ TypeScript will error at the `SectionRenderer` switch if you forget step 3.
 
 ## Blog posts / essays
 
-Posts are fully templated. **To add a post, append one object to the `posts` array in `app/data/posts.ts` — nothing else.** No new route, component, middleware, or sitemap edits are needed.
+Posts are fully templated. **To add a post, append one object to the `posts` array in `app/data/portfolio.json` — nothing else.** No new route, component, middleware, or sitemap edits are needed. (`app/data/posts.ts` only holds the `Post` types and lookup helpers — it reads its data from the JSON.)
 
 Each post:
-```ts
+```json
 {
-  slug: "my-post",          // URL becomes /my-post (lowercase-kebab-case)
-  kicker: "Essay",          // small uppercase label above the title
-  title: "My Post Title",
-  description: "One-line meta description for SEO / previews.",
-  date: "2026-07-03",       // YYYY-MM-DD, used for ordering + sitemap
-  blocks: [ ...post blocks ]
+  "slug": "my-post",
+  "kicker": "Essay",
+  "title": "My Post Title",
+  "description": "One-line meta description for SEO / previews.",
+  "date": "2026-07-03",
+  "blocks": [ ...post blocks ]
 }
 ```
+`slug` becomes the URL (`/my-post`, lowercase-kebab-case); `kicker` is the small uppercase label above the title; `date` is YYYY-MM-DD, used for ordering and the sitemap.
 
 A post block is one of:
-```ts
-{ type: "p",    text: "A paragraph with **bold** and [links](https://...)." }
-{ type: "h2",   text: "A section heading" }
-{ type: "list", items: ["First bullet", "Second **bold** bullet"] }
+```json
+{ "type": "p",    "text": "A paragraph with **bold** and [links](https://...)." }
+{ "type": "h2",   "text": "A section heading" }
+{ "type": "list", "items": ["First bullet", "Second **bold** bullet"] }
 ```
 
 Everything else is derived automatically from that data:
@@ -325,7 +327,7 @@ Everything else is derived automatically from that data:
 
 To feature a post with the pill above the hero, point `meta.featured.href` in `portfolio.json` at `/<slug>`.
 
-Do not hardcode post content in `app/[slug]/page.tsx` — that file is the fixed template; `posts.ts` is the content.
+Do not hardcode post content in `app/[slug]/page.tsx` — that file is the fixed template; the `posts` array in `portfolio.json` is the content.
 
 ## Images
 
