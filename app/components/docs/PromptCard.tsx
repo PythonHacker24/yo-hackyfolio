@@ -21,8 +21,8 @@ export function PromptCard({ prompt }: { prompt: string }) {
   };
 
   return (
-    <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-zinc-950">
-      <div className="flex items-center justify-between gap-3 border-b border-gray-200 dark:border-gray-800 px-4 py-3">
+    <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-zinc-950">
+      <div className="flex items-center justify-between gap-3 border-b border-gray-200 dark:border-gray-700 px-4 py-3">
         <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-500">
           Setup prompt
         </span>

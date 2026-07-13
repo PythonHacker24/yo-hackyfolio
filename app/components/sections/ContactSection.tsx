@@ -1,5 +1,6 @@
 import { SectionShell } from "../SectionShell";
 import { Icon } from "../icons";
+import { WaterImage } from "../WaterImage";
 import type { Social } from "../types";
 
 export interface Cta {
@@ -28,7 +29,7 @@ export function ContactSection({
 }) {
   return (
     <SectionShell title={title}>
-      <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8 overflow-hidden">
+      <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8 overflow-hidden">
         <div className="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
 
           {/* Left: text content */}
@@ -46,7 +47,7 @@ export function ContactSection({
                   className={
                     cta.primary
                       ? "inline-flex items-center justify-center gap-2 rounded-lg bg-black dark:bg-white px-5 py-3 text-sm font-semibold text-white dark:text-black transition-opacity hover:opacity-90"
-                      : "inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 dark:border-gray-800 px-5 py-3 text-sm font-semibold text-black dark:text-white transition-colors hover:bg-gray-50 dark:hover:bg-zinc-900"
+                      : "inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 px-5 py-3 text-sm font-semibold text-black dark:text-white transition-colors hover:bg-gray-50 dark:hover:bg-zinc-900"
                   }
                 >
                   <Icon name={cta.icon} className="h-4 w-4" />
@@ -68,7 +69,7 @@ export function ContactSection({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 transition-colors hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 transition-colors hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white"
                   >
                     <Icon name={social.icon} className="h-4 w-4" />
                   </a>
@@ -84,13 +85,7 @@ export function ContactSection({
                 {/* Card shadow layers for depth */}
                 <div className="absolute inset-0 rounded-2xl bg-gray-200 dark:bg-gray-700 translate-x-1.5 translate-y-1.5" />
                 <div className="relative rounded-2xl overflow-hidden w-40 sm:w-44 aspect-square border border-gray-200 dark:border-gray-700 shadow-md">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={data.image}
-                    alt="Illustration"
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
+                  <WaterImage src={data.image} alt="Illustration" />
                   {/* Subtle overlay for dark mode blend */}
                   <div className="absolute inset-0 bg-black/0 dark:bg-black/10 pointer-events-none" />
                 </div>

@@ -234,10 +234,10 @@ npm run start`}</CodeBlock>
             <C>app/components/sections/</C>. Open a component to see its exact <C>*Data</C> type at
             the top of the file.
           </p>
-          <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-800">
+          <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-gray-200 dark:border-gray-800 text-left text-gray-500 dark:text-gray-500">
+                <tr className="border-b border-gray-200 dark:border-gray-700 text-left text-gray-500 dark:text-gray-500">
                   <th className="px-4 py-3 font-semibold">type</th>
                   <th className="px-4 py-3 font-semibold">What it shows</th>
                 </tr>

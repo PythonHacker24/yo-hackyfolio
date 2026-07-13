@@ -16,7 +16,7 @@ export interface ExpandableCardData {
 export function ExpandableCardSection({ title, data }: { title: string; data: ExpandableCardData }) {
   return (
     <SectionShell title={title}>
-      <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
+      <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
         <div className="mb-6">
           <span className="text-lg font-semibold text-black dark:text-white">{data.heading}</span>
         </div>

@@ -1,6 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { SectionShell } from "../SectionShell";
 import { RichText } from "../RichText";
+import { WaterImage } from "../WaterImage";
+import { CountUp } from "../CountUp";
 import type { Block, LinkRef } from "../types";
 
 export interface ProjectStat {
@@ -22,7 +24,7 @@ export interface ProjectData {
 export function ProjectSection({ title, data }: { title: string; data: ProjectData }) {
   return (
     <SectionShell title={title}>
-      <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
+      <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
         {/* Header: name + subtitle + logo */}
         <div className="mb-6 flex items-start justify-between gap-4">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -64,13 +66,7 @@ export function ProjectSection({ title, data }: { title: string; data: ProjectDa
               <div className="relative -rotate-2 hover:rotate-0 transition-transform duration-300 ease-out">
                 <div className="absolute inset-0 rounded-2xl bg-gray-200 dark:bg-gray-700 translate-x-1.5 translate-y-1.5" />
                 <div className="relative rounded-2xl overflow-hidden w-40 sm:w-44 border border-gray-200 dark:border-gray-700 shadow-md" style={{ aspectRatio: "4/5" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={data.cardImage}
-                    alt="Illustration"
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
+                  <WaterImage src={data.cardImage} alt="Illustration" />
                   <div className="absolute inset-0 bg-black/0 dark:bg-black/10 pointer-events-none" />
                 </div>
               </div>
@@ -83,7 +79,7 @@ export function ProjectSection({ title, data }: { title: string; data: ProjectDa
             {data.stats.map((stat) => (
               <div key={stat.label} className="flex flex-col gap-1">
                 <span className="text-2xl font-bold tabular-nums text-black dark:text-white sm:text-3xl">
-                  {stat.value}
+                  <CountUp value={stat.value} />
                 </span>
                 <span className="text-xs text-gray-400 dark:text-gray-500">{stat.label}</span>
               </div>

@@ -15,7 +15,7 @@ export interface RecommendationsData {
 export function RecommendationsSection({ title, data }: { title: string; data: RecommendationsData }) {
   return (
     <SectionShell title={title}>
-      <div className="space-y-8 rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
+      <div className="space-y-8 rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
         {data.items.map((rec) => (
           <div key={rec.name} className="group">
             <div className="mb-3">

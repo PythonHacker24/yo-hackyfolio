@@ -29,7 +29,7 @@ export function ExperienceSection({ title, data }: { title: string; data: Experi
   return (
     <SectionShell title={title} className="mt-6">
       {/* Featured / Current role */}
-      <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
+      <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
         <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">
           {featured.logo && (
             <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg">
@@ -70,7 +70,7 @@ export function ExperienceSection({ title, data }: { title: string; data: Experi
         <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-600">
           {previousLabel}
         </h3>
-        <div className="flex flex-col rounded-xl border border-gray-200 dark:border-gray-800 px-6 sm:px-8 divide-y divide-gray-100 dark:divide-gray-800/60">
+        <div className="flex flex-col rounded-xl border border-gray-200 dark:border-gray-700 px-6 sm:px-8">
           {previous.map((item) => (
             <ExpandableExperienceItem key={item.name} title={item.name} role={item.role} location={item.location} link={item.link} logo={item.logo}>
               <div className="space-y-2">

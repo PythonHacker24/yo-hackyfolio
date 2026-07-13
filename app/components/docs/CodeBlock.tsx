@@ -27,9 +27,9 @@ export function CodeBlock({
   };
 
   return (
-    <div className="group relative overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-zinc-950">
+    <div className="group relative overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-zinc-950">
       {label ? (
-        <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 px-4 py-2">
+        <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-4 py-2">
           <span className="font-mono text-xs text-gray-500 dark:text-gray-500">{label}</span>
           <CopyButton copied={copied} onClick={copy} />
         </div>

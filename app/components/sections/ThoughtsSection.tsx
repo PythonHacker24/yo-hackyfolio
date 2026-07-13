@@ -38,7 +38,7 @@ export function ThoughtsSection({ title, data }: { title: string; data: Thoughts
           <Link
             key={post.slug}
             href={`/${post.slug}`}
-            className="group relative block overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 p-4 transition-all hover:-translate-y-0.5 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-sm"
+            className="group relative block overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 p-4 transition-all hover:-translate-y-0.5 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm"
           >
             {/* Meta row */}
             <div className="mb-1.5 flex items-center gap-2 text-[10px] font-medium text-gray-400 dark:text-gray-500">

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { QRCodeSVG } from "qrcode.react";
-import { QrCode, X, User, Bot, Code2, ArrowUpRight } from "lucide-react";
+import { QrCode, X, User, Bot, Code2, ArrowUpRight, Copy, Check } from "lucide-react";
 
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Reveal } from "./components/Reveal";
@@ -20,7 +20,14 @@ export default function Home() {
   const [time, setTime] = useState<string>("");
   const [showQR, setShowQR] = useState(false);
   const [mode, setMode] = useState<"human" | "agent">("human");
+  const [copied, setCopied] = useState(false);
   const { resolvedTheme } = useTheme();
+
+  const copyMarkdown = async () => {
+    await navigator.clipboard.writeText(markdownContent);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   // Single clock, shared by the hero display and the agent-mode markdown.
   const tz = portfolio.sections.find((s) => s.type === "hero")?.data.timezone.tz ?? "Asia/Kolkata";
@@ -72,10 +79,14 @@ export default function Home() {
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="flex w-full max-w-2xl flex-col items-start text-left px-4 sm:px-0"
           >
-            <pre
-              className="w-full whitespace-pre-wrap font-mono text-sm leading-relaxed text-black dark:text-gray-300 selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black antialiased"
-              style={{ fontFamily: '"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Console", monospace' }}
+            <button
+              onClick={copyMarkdown}
+              className="mb-6 inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:opacity-80 active:scale-95 dark:bg-white dark:text-black"
             >
+              {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+              {copied ? "Copied!" : "Copy Markdown"}
+            </button>
+            <pre className="w-full whitespace-pre-wrap font-sans text-sm leading-relaxed text-black dark:text-gray-300 selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black antialiased">
               {markdownContent}
             </pre>
           </motion.main>
@@ -194,7 +205,7 @@ export default function Home() {
           onClick={() => setShowQR(false)}
         >
           <div
-            className="relative rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-8 shadow-2xl"
+            className="relative rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black p-8 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button

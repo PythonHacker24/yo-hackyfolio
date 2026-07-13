@@ -41,7 +41,7 @@ export default function ThoughtsPage() {
             <Link
               key={post.slug}
               href={`/${post.slug}`}
-              className="group block rounded-xl border border-gray-200 dark:border-gray-800 p-6 transition-all hover:-translate-y-0.5 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-sm"
+              className="group block rounded-xl border border-gray-200 dark:border-gray-700 p-6 transition-all hover:-translate-y-0.5 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm"
             >
               <div className="mb-2 flex items-center gap-3 text-xs font-medium text-gray-400 dark:text-gray-500">
                 <span className="uppercase tracking-widest">{post.kicker}</span>

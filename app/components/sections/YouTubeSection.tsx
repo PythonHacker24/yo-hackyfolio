@@ -28,7 +28,7 @@ function getYouTubeId(url: string): string | null {
 export function YouTubeSection({ title, data }: { title: string; data: YouTubeData }) {
   return (
     <SectionShell title={title}>
-      <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
+      <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
 
         {/* Channel header */}
         <div className="flex items-start gap-4">
@@ -76,7 +76,7 @@ export function YouTubeSection({ title, data }: { title: string; data: YouTubeDa
                 href={video.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-zinc-900"
+                className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-zinc-900"
               >
                 {/* Thumbnail — natural 16:9, no cropping */}
                 <div className="relative aspect-video overflow-hidden">
@@ -108,7 +108,7 @@ export function YouTubeSection({ title, data }: { title: string; data: YouTubeDa
               href={data.footerLink.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-200 bg-gray-50 p-3 text-center transition-colors hover:border-gray-300 hover:bg-white dark:border-gray-800 dark:bg-zinc-900 dark:hover:border-gray-600 dark:hover:bg-zinc-800"
+              className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-200 bg-gray-50 p-3 text-center transition-colors hover:border-gray-300 hover:bg-white dark:border-gray-700 dark:bg-zinc-900 dark:hover:border-gray-600 dark:hover:bg-zinc-800"
             >
               <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ring-1 ring-gray-200 transition-transform group-hover:scale-105 dark:ring-gray-700">
                 <Image src={data.image} alt={data.name} fill sizes="48px" className="object-cover" />

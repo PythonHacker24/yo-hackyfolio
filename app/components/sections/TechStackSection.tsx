@@ -19,6 +19,30 @@ export interface TechStackData {
   categories: SkillCategory[];
 }
 
+/** Brand-colored icon in light mode, white in dark mode (dark logos are
+ *  invisible on a dark background). Both variants come from the same CDN;
+ *  the hidden one stays unfetched thanks to lazy loading. */
+function TechIcon({ slug, name, className }: { slug: string; name: string; className: string }) {
+  return (
+    <>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`https://cdn.simpleicons.org/${slug}`}
+        alt={name}
+        className={`${className} dark:hidden`}
+        loading="lazy"
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`https://cdn.simpleicons.org/${slug}/white`}
+        alt={name}
+        className={`${className} hidden dark:block`}
+        loading="lazy"
+      />
+    </>
+  );
+}
+
 export function TechStackSection({ title, data }: { title: string; data: TechStackData }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const marqueeSkills = data.categories.flatMap((c) => c.skills);
@@ -52,12 +76,10 @@ export function TechStackSection({ title, data }: { title: string; data: TechSta
                     {marqueeSkills.map((tech, index) => (
                       <div key={`${dup}-${index}`} className="flex flex-col items-center justify-center gap-2">
                         <div className="h-10 w-10 transition-all duration-300">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={`https://cdn.simpleicons.org/${tech.slug}`}
-                            alt={tech.name}
+                          <TechIcon
+                            slug={tech.slug}
+                            name={tech.name}
                             className="h-full w-full object-contain opacity-80 hover:opacity-100 transition-all duration-300"
-                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -88,12 +110,10 @@ export function TechStackSection({ title, data }: { title: string; data: TechSta
                           className="group flex items-center gap-3 rounded-lg border border-transparent p-2 transition-all hover:border-gray-100 dark:hover:border-zinc-800 hover:bg-gray-50/50 dark:hover:bg-zinc-900/50"
                         >
                           <div className="h-5 w-5 shrink-0 transition-all duration-300">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                              src={`https://cdn.simpleicons.org/${skill.slug}`}
-                              alt={skill.name}
+                            <TechIcon
+                              slug={skill.slug}
+                              name={skill.name}
                               className="h-full w-full object-contain opacity-70 group-hover:opacity-100 transition-all duration-300"
-                              loading="lazy"
                             />
                           </div>
                           <span className="text-sm font-medium text-gray-500 dark:text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors">

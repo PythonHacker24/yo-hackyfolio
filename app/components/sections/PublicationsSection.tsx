@@ -22,7 +22,7 @@ export function PublicationsSection({ title, data }: { title: string; data: Publ
     <SectionShell title={title}>
       <div className="space-y-6">
         {data.items.map((pub) => (
-          <div key={pub.title} className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
+          <div key={pub.title} className="rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
             <div className="mb-1 flex items-start justify-between gap-4">
               <a
                 href={pub.link}
