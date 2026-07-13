@@ -11,6 +11,7 @@ import { ThemeToggle } from "./components/ThemeToggle";
 import { Reveal } from "./components/Reveal";
 import { Icon } from "./components/icons";
 import { SectionRenderer, type PortfolioData } from "./components/sections/registry";
+import { WaterOverlay } from "./components/WaterImage";
 import { generateMarkdown } from "./data/generateMarkdown";
 import portfolioJson from "./data/portfolio.json";
 
@@ -22,6 +23,14 @@ export default function Home() {
   const [mode, setMode] = useState<"human" | "agent">("human");
   const [copied, setCopied] = useState(false);
   const { resolvedTheme } = useTheme();
+
+  // Hold the navbar entrance until its water shader is rendering, so it never
+  // pops in half-drawn. The timeout is a fallback for browsers without WebGL.
+  const [navReady, setNavReady] = useState(false);
+  useEffect(() => {
+    const fallback = setTimeout(() => setNavReady(true), 1600);
+    return () => clearTimeout(fallback);
+  }, []);
 
   const copyMarkdown = async () => {
     await navigator.clipboard.writeText(markdownContent);
@@ -134,8 +143,8 @@ export default function Home() {
       {/* Glass Island Navbar */}
       <motion.nav
         initial={{ opacity: 0, y: 60, scale: 0.8, x: "-50%" }}
-        animate={{ opacity: 1, y: 0, scale: 1, x: "-50%" }}
-        transition={{ type: "spring", stiffness: 260, damping: 15, delay: 0.15 }}
+        animate={navReady ? { opacity: 1, y: 0, scale: 1, x: "-50%" } : { opacity: 0, y: 60, scale: 0.8, x: "-50%" }}
+        transition={{ type: "spring", stiffness: 260, damping: 15 }}
         className="fixed bottom-6 left-1/2 flex items-center gap-3 overflow-hidden rounded-full border border-gray-200 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/80 px-4 py-3 shadow-sm backdrop-blur-md transition-colors hover:bg-white/90 dark:hover:bg-zinc-900 sm:gap-6 sm:px-6"
       >
         {/* Glass shine — edge highlight replays on load and on theme toggle
@@ -144,6 +153,12 @@ export default function Home() {
           key={resolvedTheme}
           aria-hidden
           className="nav-edge-shine pointer-events-none absolute inset-0 -z-10 rounded-full"
+        />
+        {/* Water surface behind the icons — bluish on white, slate on dark */}
+        <WaterOverlay
+          colorHighlight={resolvedTheme === "dark" ? "#475569" : "#2563eb"}
+          highlights={resolvedTheme === "dark" ? 0.22 : 0.45}
+          onReady={() => setNavReady(true)}
         />
         {/* Mode Toggle Switch */}
         <div className="flex items-center">
