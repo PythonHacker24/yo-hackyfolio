@@ -1,4 +1,4 @@
-import { Github, Linkedin, Youtube, Calendar, Mail } from "lucide-react";
+import { Github, Linkedin, Youtube, Calendar, Mail, Instagram } from "lucide-react";
 import { FaXTwitter, FaMedium } from "react-icons/fa6";
 import type { ComponentType, SVGProps } from "react";
 
@@ -18,6 +18,7 @@ export const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   x: FaXTwitter,
   medium: FaMedium,
   discord: DiscordIcon,
+  instagram: Instagram,
 };
 
 /** Resolve an icon by name, rendering nothing if the name is unknown. */
