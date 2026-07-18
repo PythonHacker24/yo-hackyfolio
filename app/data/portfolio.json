@@ -585,7 +585,7 @@
             "name": "Engineering Intern",
             "role": "Athena Consulting Ltd.",
             "location": "Dubai",
-            "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQF9MMIpP3ksYQ/company-logo_200_200/company-logo_200_200/0/1672242362219/athenaconsulting1_logo?e=1784160000&v=beta&t=_HTwTwnR9MGd3H2HltAtz_z2BwLEzQsO8WhysZ45Cqo",
+            "logo": "/athena-logo.jpeg",
             "body": [
               "Led the complete system design and deployment architecture for Eumlet, a UAE-based B2B Web3 payments and financial platform (built on Next.js), on AWS infrastructure. Configured Debian EC2 instances, Application Load Balancer (ALB), and NGINX reverse proxy under senior guidance - ensuring high availability, scalability, and secure handling of financial transactions in a regulated environment.",
               "Engineered automated CI/CD pipelines using GitHub Actions for seamless build, test, and deployment workflows, with direct integration and manual orchestration to EC2 targets - demonstrating strong expertise in modern DevOps practices, infrastructure as code principles, and zero-downtime deployments for production fintech applications.",
@@ -801,6 +801,18 @@
           "label": "Read the full case study",
           "url": "https://www.doubledart.fun/case-study"
         }
+      }
+    },
+    {
+      "type": "podcast",
+      "title": "Podcast",
+      "data": {
+        "episodes": [
+          {
+            "title": "Agents, Jobs, and Startups with Sam Kaplan, Founder of Remix (YC W26)",
+            "url": "https://youtu.be/JzbqLMN8hbw"
+          }
+        ]
       }
     },
     {

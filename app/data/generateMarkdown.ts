@@ -70,6 +70,15 @@ export function generateMarkdown(data: PortfolioData, time: string): string {
     parts.push(lines.join("\n"));
   }
 
+  // Podcast
+  const podcast = find(sections, "podcast");
+  if (podcast) {
+    const items = podcast.data.episodes
+      .map((e) => `- [${e.title}](${e.url})${e.description ? ` — ${e.description}` : ""}`)
+      .join("\n");
+    parts.push(`## ${podcast.title}\n\n${items}`);
+  }
+
   // Education
   const education = find(sections, "education");
   if (education) {
