@@ -521,7 +521,7 @@
         "featured": {
           "name": "Remix (YC W26)",
           "link": "https://www.ycombinator.com/companies/resonate",
-          "logo": "https://remix.re/app-icon.png",
+          "logo": "/remix-logo.jpeg",
           "role": "Founding Engineer, San Francisco, CA",
           "dateRange": "February 2026 - Present",
           "collapsedHeight": "max-h-48",
